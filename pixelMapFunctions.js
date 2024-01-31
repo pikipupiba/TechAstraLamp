@@ -1,4 +1,17 @@
 function (pixelCount) {
+  width = 9.5
+  var map = []
+  for (i = pixelCount - 1; i >= 0; i--) {
+    y = i / pixelCount
+    x = (1 - (i % width)/width)/1.5
+
+    map.push([x, y])
+  }
+  return map
+}
+
+// 3D Cylinder - Accurate to real-world shape of the lamp.
+function (pixelCount) {
   ledsPerTurn = 10.5
   var map = []
 
